@@ -8,6 +8,16 @@ plugins:
 provider:
   name: aws
   runtime: nodejs18.x
+  environment:
+    PRISMA_BINARY_TARGET: "rhel-openssl-1.0.x"
+    DATABASE_URL: "mongodb+srv://<username>:<password>@<cluster-url>/<database-name>"
+
+package:
+  patterns:
+    - '!node_modules/.prisma/client/libquery_engine-*'
+    - 'node_modules/.prisma/client/libquery_engine-rhel-*'
+    - '!node_modules/prisma/libquery_engine-*'
+    - '!node_modules/@prisma/engines/**'
 
 functions:
   main: # The name of the lambda function

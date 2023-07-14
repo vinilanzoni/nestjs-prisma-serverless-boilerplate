@@ -1,4 +1,4 @@
-# NestJS Serverless Boilerplate
+# NestJS Prisma Serverless Boilerplate
 
 This project uses the NestJS framework to create a serverless application using AWS Lambda and API Gateway.
 
